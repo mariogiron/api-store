@@ -1,0 +1,58 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/products
+
+###
+GET {{host}}/api/products/671f6f8b2bede92b1af1a3a9
+
+
+
+
+
+###
+PUT {{host}}/api/users/add-product/671f6f8b2bede92b1af1a3a9
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZDgyMjFjZDZlZDAzNDJmZmFlYTM1IiwiaWF0IjoxNzMzMTM5MjEyfQ.N-Wg6RoNr0uVkndeYGtQ8vx2RyPNdU1VFL0b2PnACbo
+
+
+
+
+
+
+
+
+###
+GET {{host}}/api/products/price/350/750
+
+###
+POST {{host}}/api/products
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZDgyMjFjZDZlZDAzNDJmZmFlYTM1IiwiaWF0IjoxNzMzMTM5MjEyfQ.N-Wg6RoNr0uVkndeYGtQ8vx2RyPNdU1VFL0b2PnACbo
+
+{
+    "name": "Camisa azulita",
+    "description": "Azul cielo",
+    "price": 32,
+    "department": "mujer",
+    "stock": 200,
+    "available": false
+}
+
+###
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "username": "antonio",
+    "password": "12345",
+    "email": "antonio@gmail.com",
+    "role": "regular"
+}
+
+###
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "password": "12345",
+    "email": "antonio@gmail.com"
+}
